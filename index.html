@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de clientes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <h1>Gerenciamento de Clientes</h1>
+    <button onclick="adicionar()">Adicionar</button>
+     <table id="table-customers"> <!-- Tabela -->
+      <thead>    <!-- Cabeçalho -->
+            <tr><!-- Table row, linha da tabela -->
+                <th>Nome:</th>
+                <th>CPF:</th>
+                <th>Telefone:</th>
+                <th>Idade do 1° beijo:</th>
+                <th>Genêro:</th>
+                <th>Ações:</th>
+                
+            </tr>
+            <tbody>
+                
+            </tbody>
+        </thead>
+    </table>
+
+    <div id="container-modal">
+        <form id="form-modal" onsubmit="return false">
+        <div class="form-group">
+            <label>Nome</label>
+            <input type="text" name="nome" id="nome">
+        </div>
+        <div class="form-group">
+            <label>CPF</label>
+            <input type="text" name="cpf" id="cpf">
+        </div>
+        <div class="form-group">
+            <label>Telefone</label>
+            <input type="tel" name="tel" id="tel">
+        </div>
+        <div class="form-group">
+            <label>Idade do 1° beijo:</label>
+            <input type="text" name="idade" id="idadeBeijo">
+        </div>
+        <div class="form-group">
+            <label>Genêro</label>
+            <input type="text" name="Genêro" id="genero">
+        </div>
+
+        <div class="form-buttons">
+            <button onclick="salvar()">Salvar</button>
+            <button onclick="cancelar()" id="botao-cancelar">Cancelar</button>
+        </div>
+        </form>
+    </div>
+
+</body>
+</html>
