@@ -1,3 +1,42 @@
+body{
+    margin: 0px;
+    font-family: sans-serif;
+}
+nav{
+    /* padding-left: 10%; */
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #1c1c7e;
+}
+nav h1 {
+    font-family: sans-serif;
+    margin-left: 10%;
+    color: #fff;
+    flex: 1;
+}  
+#addButton{
+    height: 40px;
+    width: 250px;
+    font-size: 18px;
+    background-color: #069;
+    margin-right: 15%; 
+}
+#addButton:hover{
+    background-color: #1c1c7e;
+    color: #fff;
+    border-color: #fff;
+}
+i{
+    margin-right: 10%;
+}
+#add{
+    color: #fff;
+    margin-left:0px ;
+    font-size: 17px;
+} 
 #container-modal{
     display: none;/* Deixa invisivel */
     background-color: #cccccc65;
@@ -14,11 +53,7 @@
     padding: 20px;
     border-radius: 20px;
 }
-h1 {
-    font-family: sans-serif;
-    font-size: 1.2em;
-    color: #069;
-}   
+ 
 button {
     background-color: #1c1c7e;
     color: #fff;
@@ -27,18 +62,48 @@ button {
     border-radius: 5px;
     margin: 5px;
     cursor: pointer;
+    font-family: sans-serif;
 }
-#botao-cancelar{
+button:hover{
     background-color: #fff;
     color: #1c1c7e;
     border: 1px solid #1c1c7e;
+}
+#botao-cancelar{
+    background-color: rgb(172, 9, 9);
+    color: #fff;
+    border: 1px solid rgb(172, 9, 9);
+    width: 80%;
+    font-size: 95%;
+}
+#botao-cancelar:hover{
+    background-color: #fff;
+    color: rgb(172, 9, 9);
+    border: 1px solid #1c1c7e;
+}
+#botao-salvar{
+    width: 80%;
+    font-size: 95%;
+}
+#botao-alterar{
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    
 }
 .botao-excluir{
     background-color: rgb(172, 9, 9);
     color: #fff;
     border-width: 0px;
-   
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
 }
+.botao-excluir:hover{
+    background-color:  #fff;
+    color:rgb(172, 9, 9);
+}
+
 table{
     width: 100%;
 }
@@ -62,7 +127,7 @@ tbody tr:nth-child(even){
 .form-group label{
     flex: 1;
     font-family: sans-serif;
-    font-weight: bold;
+    font-weight: bold; 
     margin-right: 10px;
     align-self: center;
 }
@@ -74,6 +139,10 @@ tbody tr:nth-child(even){
 .form-buttons{
     display: flex;
     justify-content: center;
+}
+.informacoes{
+    font-size: larger;
+    text-align: center;
 }
 /* 
 frame works:

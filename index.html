@@ -7,17 +7,20 @@
     <title>Gerenciamento de clientes</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/3a136bbce7.js" crossorigin="anonymous"></script>   
 </head>
 <body>
-    <h1>Gerenciamento de Clientes</h1>
-    <button onclick="adicionar()">Adicionar</button>
+    <nav>
+        <h1>Gerenciamento de Colaboradores</h1>
+        <button onclick="adicionar()" id="addButton"> <i class="fa-solid fa-plus" id="add"></i>ADICIONAR</button>
+    </nav>
      <table id="table-customers"> <!-- Tabela -->
       <thead>    <!-- Cabeçalho -->
             <tr><!-- Table row, linha da tabela -->
                 <th>Nome:</th>
                 <th>CPF:</th>
                 <th>Telefone:</th>
-                <th>Idade do 1° beijo:</th>
+                <th>Idade:</th>
                 <th>Genêro:</th>
                 <th>Ações:</th>
                 
@@ -43,16 +46,16 @@
             <input type="tel" name="tel" id="tel">
         </div>
         <div class="form-group">
-            <label>Idade do 1° beijo:</label>
-            <input type="text" name="idade" id="idadeBeijo">
+            <label >Idade:</label>
+            <input type="text" maxlength="2" name="idade" id="idade">
         </div>
         <div class="form-group">
             <label>Genêro</label>
-            <input type="text" name="Genêro" id="genero">
+            <input type="text" maxlength="9" name="Genêro" id="genero">
         </div>
 
         <div class="form-buttons">
-            <button onclick="salvar()">Salvar</button>
+            <button onclick="salvar()" id="botao-salvar">Salvar</button>
             <button onclick="cancelar()" id="botao-cancelar">Cancelar</button>
         </div>
         </form>

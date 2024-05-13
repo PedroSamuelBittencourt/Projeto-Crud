@@ -18,7 +18,7 @@ function alterar(cpf){
             document.getElementById("nome").value = cliente.nome
             document.getElementById("cpf").value = cliente.cpf
             document.getElementById("tel").value = cliente.telefone
-            document.getElementById("idadeBeijo").value = cliente.idadeBeijo
+            document.getElementById("idade").value = cliente.idade
             document.getElementById("genero").value = cliente.genero
             clienteAlterado = cliente
         }
@@ -63,7 +63,7 @@ function salvar() {
     let nome = document.getElementById("nome").value
     let cpf = document.getElementById("cpf").value
     let telefone = document.getElementById("tel").value
-    let idadeBeijo = document.getElementById("idadeBeijo").value
+    let idade = document.getElementById("idade").value
     let genero = document.getElementById("genero").value
     
     //se não tiver alterando ninguém, add vetor
@@ -72,7 +72,7 @@ function salvar() {
                 "nome": nome,
                 "cpf": cpf,
                 "telefone": telefone,
-                "idadeBeijo": idadeBeijo,
+                "idade": idade,
                 "genero": genero
             }
             //add o objeto cliente no vetor de clientes
@@ -81,7 +81,7 @@ function salvar() {
             clienteAlterado.nome = nome
             clienteAlterado.cpf = cpf
             clienteAlterado.telefone = telefone
-            clienteAlterado.idadeBeijo = idadeBeijo
+            clienteAlterado.idade = idade
             clienteAlterado.genero = genero
         }
 
@@ -101,14 +101,14 @@ function exibirDados() {
     for (let i = 0; i < clientes.length; i++) {
         let linha= `
                 <tr>
-                <td>${clientes[i].nome}</td>
-                <td>${clientes[i].cpf}</td>
-                <td>${clientes[i].telefone}</td>
-                <td>${clientes[i].idadeBeijo}</td>
-                <td>${clientes[i].genero}</td>
+                <td class= 'informacoes'>${clientes[i].nome}</td>
+                <td class= 'informacoes'>${clientes[i].cpf}</td>
+                <td class= 'informacoes'>${clientes[i].telefone}</td>
+                <td class= 'informacoes'>${clientes[i].idade}</td>
+                <td class= 'informacoes'>${clientes[i].genero}</td>
                 <td>
-                    <button onclick="alterar('${clientes[i].cpf}')">Alterar</button>
-                    <button onclick="excluir('${clientes[i].cpf}')"  class='botao-excluir'>Excluir</button>
+                    <button onclick="alterar('${clientes[i].cpf}')" id='botao-alterar'> <i class='fa-solid fa-pen' ></i>Alterar</button>
+                    <button onclick="excluir('${clientes[i].cpf}')"class='botao-excluir'><i class='fa-solid fa-trash'></i>Excluir</button>
                 </td>
                 </tr>
                  `
@@ -119,12 +119,10 @@ function exibirDados() {
 }
 }
 function limparform(){
-    document.getElementById("nome").value = ""
-    
-    document.getElementById("cpf").value = ""
-    
+    document.getElementById("nome").value = ""  
+    document.getElementById("cpf").value = ""   
     document.getElementById("tel").value = ""
-    document.getElementById("idadeBeijo").value = ""
+    document.getElementById("idade").value = ""
     document.getElementById("genero").value = ""
 }
 
